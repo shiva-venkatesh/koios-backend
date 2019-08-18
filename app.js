@@ -3,6 +3,7 @@ var morgan = require('morgan')
 var request = require('request')
 
 var app = express()
+var port = process.env.PORT || 3001;
 
 app.use(morgan('combined'))
 
@@ -29,4 +30,4 @@ app.get('/news', function (req, res) {
   });
 })
 
-app.listen(3001)
+app.listen(port);
